@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  app:
+    image: "${SERVICE_NAME}-${ENV}-${ORGANIZATION}:latest"
+    container_name: "${SERVICE_NAME}.${ENV}.${ORGANIZATION}-${SERVER}.internal"
+    build:
+      context: .
+      args:
+        BL_NPM_REGISTRY_TOKEN: "${BL_NPM_REGISTRY_TOKEN}"
+    env_file:
+      - $PWD/.env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+    restart: unless-stopped
+    ports: 
+      - "${PORT}:${PORT}"
+    volumes:
+      - $PWD/database:/app/database
+      - bukalapak-development-volume:/bukalapak-development
+    networks:
+      - bukalapak-development-internal-network
+    command: "${COMMAND}"
+
+networks:
+  bukalapak-development-internal-network:
+    external: true
+    
+volumes: 
+  bukalapak-development-volume:
+    external: true

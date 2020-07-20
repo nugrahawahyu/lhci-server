@@ -1,0 +1,13 @@
+{
+  "name": "lhci-server",
+  "author": "CORE-FE",
+  "scripts": {
+    "start": "node src/index.js",
+    "wizard": "lhci wizard"
+  },
+  "dependencies": {
+    "@lhci/cli": "^0.4.2",
+    "@lhci/server": "^0.4.2",
+    "sqlite3": "^5.0.0"
+  }
+}
