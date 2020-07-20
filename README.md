@@ -20,6 +20,8 @@ docker-compose build
 docker-compose up
 ```
 
+Open [lighthouse server](http://localhost:12341)
+
 ### Setup a Project
 ```
 docker-compose exec app yarn wizard
