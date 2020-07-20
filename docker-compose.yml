@@ -19,15 +19,4 @@ services:
       - "${PORT}:${PORT}"
     volumes:
       - $PWD/database:/app/database
-      - bukalapak-development-volume:/bukalapak-development
-    networks:
-      - bukalapak-development-internal-network
     command: "${COMMAND}"
-
-networks:
-  bukalapak-development-internal-network:
-    external: true
-    
-volumes: 
-  bukalapak-development-volume:
-    external: true

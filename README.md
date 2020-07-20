@@ -2,12 +2,6 @@
 
 ## Setup
 
-### Docker volume and network
-```
-docker volume create bukalapak-development-volume
-docker network create bukalapak-development-internal-network
-```
-
 ### Build
 ```
 docker-compose build
@@ -24,5 +18,10 @@ Open [lighthouse server](http://localhost:12341)
 
 ### Setup a Project
 ```
-docker-compose exec app yarn wizard
+docker-compose exec app lhci wizard
+```
+
+### Clean Up
+```
+docker-compose down --volume --rmi local
 ```
