@@ -1,4 +1,4 @@
-# Lighthouse Server
+# Lighthouse CI Server
 
 ## Setup
 
@@ -9,12 +9,12 @@ docker-compose build
 
 ## Commands
 
-### Run Lighthouse Server Container
+### Run Lighthouse CI Server Container
 ```
 docker-compose up
 ```
 
-Open [lighthouse server](http://localhost:12341)
+Open [Lighthouse CI server](http://localhost:12341)
 
 ### Setup a Project
 ```
