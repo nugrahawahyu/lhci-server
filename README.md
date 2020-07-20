@@ -21,7 +21,7 @@ Open [Lighthouse CI server](http://localhost:12341)
 docker-compose exec app lhci wizard
 ```
 
-### Clean Up
+### Clean Up ⚠️
 ```
 docker-compose down --volume --rmi local
 ```
