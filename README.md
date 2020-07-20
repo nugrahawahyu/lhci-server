@@ -2,6 +2,12 @@
 
 ## Setup
 
+### Docker volume and network
+```
+docker volume create bukalapak-development-volume
+docker network create bukalapak-development-internal-network
+```
+
 ### Build
 ```
 docker-compose build
